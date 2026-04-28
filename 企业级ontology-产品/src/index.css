@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f8f9fa] text-[#1c2127] font-sans antialiased;
+  }
+
+  /* Palantir-like technical grid vibe */
+  .tech-grid {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px);
+  }
+
+  .border-tech {
+    @apply border-[#e1e4e8];
+  }
+
+  .bg-sidebar {
+    @apply bg-[#ffffff];
+  }
+
+  .bg-workspace {
+    @apply bg-[#f8f9fa];
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-[#106ba3] hover:bg-[#0e5a8a] text-white rounded text-sm font-medium transition-colors shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white border border-[#d1d5da] hover:bg-[#f3f4f6] text-[#24292e] rounded text-sm font-medium transition-colors;
+  }
+
+  .input-base {
+    @apply px-3 py-2 bg-white border border-[#d1d5da] rounded text-sm focus:outline-none focus:ring-1 focus:ring-[#106ba3] focus:border-[#106ba3];
+  }
+}
